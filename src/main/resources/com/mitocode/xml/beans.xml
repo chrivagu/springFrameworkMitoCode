@@ -6,4 +6,10 @@
 	<bean id="mundo" class="com.mitocode.beans.Mundo">
 		<property name="saludo" value="Hola Mundo!"></property>
     </bean>
+    
+    <bean id="persona" class="com.mitocode.beans.Persona">
+    	<constructor-arg index="0" value="1"></constructor-arg>
+    	<constructor-arg index="2" value="MitoCode"></constructor-arg>
+    	<constructor-arg index="1" value="Jaime"></constructor-arg>
+    </bean>
 </beans>

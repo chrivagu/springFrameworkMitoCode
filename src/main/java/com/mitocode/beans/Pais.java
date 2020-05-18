@@ -1,15 +1,18 @@
 package com.mitocode.beans;
 
-public class Pais {
-	private String nombre;
-	private Ciudad ciudad;
+import java.util.List;
 
-	public Ciudad getCiudad() {
-		return ciudad;
+public class Pais {
+
+	private String nombre;
+	private List<Ciudad> ciudades;
+
+	public List<Ciudad> getCiudades() {
+		return ciudades;
 	}
 
-	public void setCiudad(Ciudad ciudad) {
-		this.ciudad = ciudad;
+	public void setCiudades(List<Ciudad> ciudades) {
+		this.ciudades = ciudades;
 	}
 
 	public String getNombre() {
@@ -19,7 +22,5 @@ public class Pais {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	
 
 }

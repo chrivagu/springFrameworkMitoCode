@@ -16,13 +16,27 @@
 
 	<bean id="pais" class="com.mitocode.beans.Pais">
 		<property name="nombre" value="Peru"></property>
-		<property name="ciudad" ref="ciudad"></property>
+		<property name="ciudades">
+			<list>
+				<ref bean="ciudad1" />
+				<ref bean="ciudad2" />
+				<ref bean="ciudad3" />
+			</list>
+		</property>
 	</bean>
 
-	<bean id="ciudad" class="com.mitocode.beans.Ciudad">
+	<bean id="ciudad1" class="com.mitocode.beans.Ciudad">
 		<property name="nombre" value="Lima"></property>
 	</bean>
-	
+
+	<bean id="ciudad2" class="com.mitocode.beans.Ciudad">
+		<property name="nombre" value="Piura"></property>
+	</bean>
+
+	<bean id="ciudad3" class="com.mitocode.beans.Ciudad">
+		<property name="nombre" value="Chiclayo"></property>
+	</bean>
+
 	<alias name="persona" alias="personaBean"></alias>
 
 	<!-- Beans anidados <bean id="persona" class="com.mitocode.beans.Persona"> 

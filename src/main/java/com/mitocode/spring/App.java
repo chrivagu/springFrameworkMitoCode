@@ -30,16 +30,21 @@ public class App {
 		 * System.out.println(m.getSaludo());
 		 */
 
-		Persona per = (Persona) appContext.getBean("personaBean2");
-
-		String nombresCiudades = "";
-
-		for (Ciudad ciu : per.getPais().getCiudades()) {
-			nombresCiudades += ciu.getNombre() + "-";
-		}
+		Persona per = (Persona) appContext.getBean("persona");
 
 		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre()
-				+ " " + nombresCiudades);
+				+ " " + per.getCiudad().getNombre());
+
+		/*
+		 * String nombresCiudades = "";
+		 * 
+		 * for (Ciudad ciu : per.getPais().getCiudades()) { nombresCiudades +=
+		 * ciu.getNombre() + "-"; }
+		 * 
+		 * System.out.println(per.getId() + " " + per.getNombre() + " " +
+		 * per.getApodo() + " " + per.getPais().getNombre() + " " +
+		 * nombresCiudades);
+		 */
 	}
 
 }

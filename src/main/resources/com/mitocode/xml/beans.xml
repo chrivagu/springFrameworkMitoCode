@@ -7,10 +7,8 @@
 		<property name="saludo" value="Hola Mundo!"></property>
 	</bean>
 
-	<bean id="persona" class="com.mitocode.beans.Persona" autowire="byName">
-		<property name="id" value="1"></property>
-		<property name="nombre" value="Jaime"></property>
-		<property name="apodo" value="MitoCode"></property>
+	<bean id="persona" class="com.mitocode.beans.Persona" autowire="byName"
+		scope="singleton">
 	</bean>
 
 	<bean id="pais" class="com.mitocode.beans.Pais">

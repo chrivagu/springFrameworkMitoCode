@@ -8,7 +8,7 @@
 	</bean>
 
 	<bean id="persona" class="com.mitocode.beans.Persona" autowire="byName"
-		scope="singleton">
+		scope="singleton" lazy-init="true">
 	</bean>
 
 	<bean id="pais" class="com.mitocode.beans.Pais">

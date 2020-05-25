@@ -7,6 +7,16 @@ public class Persona {
 	private Pais pais;
 	private Ciudad ciudad;
 
+	// Metodo para ejecutarse antes de la inicializacion
+	private void initBean() {
+		System.out.println("Antes de inicializar el bean");
+	}
+
+	// Metodo para ejecutarse justo antes de ser destruido
+	private void destroyBean() {
+		System.out.println("Bean a punto de ser destruido");
+	}
+
 	public Ciudad getCiudad() {
 		return ciudad;
 	}
@@ -46,14 +56,5 @@ public class Persona {
 	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
-
-	/*
-	 * public Persona(int id, String nombre, String apodo) { super(); this.id =
-	 * id; this.nombre = nombre; this.apodo = apodo; }
-	 * 
-	 * public Persona(int id){ this.id=id; }
-	 * 
-	 * public Persona(String apodo){ this.apodo=apodo; }
-	 */
 
 }

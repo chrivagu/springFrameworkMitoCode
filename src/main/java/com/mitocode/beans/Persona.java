@@ -1,9 +1,12 @@
 package com.mitocode.beans;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Persona {
+/*import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;*/
+
+public class Persona implements InitializingBean, DisposableBean {
 	private int id;
 	private String nombre;
 	private String apodo;
@@ -11,16 +14,15 @@ public class Persona {
 	private Ciudad ciudad;
 
 	// Metodo para ejecutarse antes de la inicializacion
-	@PostConstruct
-	private void initBean() {
-		System.out.println("Antes de inicializar el bean");
-	}
-
-	// Metodo para ejecutarse justo antes de ser destruido
-	@PreDestroy
-	private void destroyBean() {
-		System.out.println("Bean a punto de ser destruido");
-	}
+	/*
+	 * @PostConstruct private void initBean() { System.out.println(
+	 * "Antes de inicializar el bean"); }
+	 * 
+	 * // Metodo para ejecutarse justo antes de ser destruido
+	 * 
+	 * @PreDestroy private void destroyBean() { System.out.println(
+	 * "Bean a punto de ser destruido"); }
+	 */
 
 	public Ciudad getCiudad() {
 		return ciudad;
@@ -60,6 +62,14 @@ public class Persona {
 
 	public void setPais(Pais pais) {
 		this.pais = pais;
+	}
+
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Antes de inicializar el bean");
+	}
+
+	public void destroy() throws Exception {
+		System.out.println("Bean a punto de ser destruido");
 	}
 
 }

@@ -11,7 +11,6 @@ public class App {
 
 	public static void main(String[] args) {
 
-		/* Con Xml */
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/mitocode/xml/beans.xml");
 
 		Persona per = (Persona) appContext.getBean("persona");

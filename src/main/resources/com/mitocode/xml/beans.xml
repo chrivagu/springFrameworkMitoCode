@@ -3,9 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="mundo" class="com.mitocode.beans.Mundo">
-		<property name="saludo" value="Hola Mundo!"></property>
-	</bean>
+	<bean class="com.mitocode.beans.MitoCodeBeanPostProcessor"></bean>
 
 	<bean id="persona" class="com.mitocode.beans.Persona" autowire="byName">
 		<property name="apodo" value="MitoCode"></property>

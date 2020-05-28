@@ -1,5 +1,7 @@
 package com.mitocode.beans;
 
+import org.springframework.beans.factory.annotation.Required;
+
 import com.mitocode.interfaces.IEquipo;
 
 public class Jugador {
@@ -20,6 +22,7 @@ public class Jugador {
 		return nombre;
 	}
 
+	@Required
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -28,6 +31,7 @@ public class Jugador {
 		return equipo;
 	}
 
+	@Required
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}

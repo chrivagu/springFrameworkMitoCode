@@ -3,18 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean class="com.mitocode.beans.MitoCodeBeanPostProcessor"></bean>
-
-	<bean id="persona" class="com.mitocode.beans.Persona" autowire="byName">
-		<property name="apodo" value="MitoCode"></property>
+	<bean id="messi" class="com.mitocode.beans.Jugador">
+		<property name="numero" value="10"></property>
+		<property name="nombre" value="Lionel Messi"></property>
+		<property name="equipo" ref="barcelona"></property>
 	</bean>
 
-	<bean id="pais" class="com.mitocode.beans.Pais">
-		<property name="nombre" value="Peru"></property>
-	</bean>
-
-	<bean id="ciudad" class="com.mitocode.beans.Ciudad">
-		<property name="nombre" value="Lima"></property>
-	</bean>
-
+	<bean id="barcelona" class="com.mitocode.beans.Barcelona"></bean>
+	<bean id="juventus" class="com.mitocode.beans.Juventus"></bean>
 </beans>
